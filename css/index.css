@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  background-color: #ffffff;
+  font-family:"Arial";
+  }
+
+/* NAVBAR */
+.nav{
+  /* Centre*/
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  /* End-Centre */
+  list-style-type: none;
+  margin: 0;
+  background-color : rgb(255, 255, 255)
+}
+
+/* Alignement des mots de la navbar*/
+li{
+  float: left !important;
+}
+
+/* Police et autres mots navbar*/
+li a {
+  display: block !important;
+  color: rgb(0, 0, 0) !important;
+  text-align: center !important;
+  padding: 14px 16px !important;
+  text-decoration: none !important ;
+}
+  body {
+    margin:0;
+  }
+  
+  .title{
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    letter-spacing: 2px;
+    font-size:48px;
+  }
+  
+  p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size:14px;
+    color: #000000;
+  }
+  
+  .header {
+    position:relative;
+    text-align:center;
+    background-image: url(https://korii.slate.fr/sites/default/files/styles/1440x600/public/chris-ried-ieic5tq8ymk-unsplash.jpg);
+    color:white;
+  }
+  /* Place au milieu le titre */
+  .inner-header {
+    height:65vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex { /*Flexbox pour content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /*Pied de page*/
+  .content {
+    position:relative;
+    height:10vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+  

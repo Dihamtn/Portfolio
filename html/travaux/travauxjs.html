@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Travaux en JS</title>
+	<link rel="stylesheet" href="../../css/travaux.css">
+</head>
+
+<body class="img">
+	<ul class=ulnom> 
+		<div class="info">
+			<li><a href="../../index.html">Accueil</a></li>
+			<li><a href="../../html/Moi.html">À propos</a></li>
+			<li><a href="../../html/BTSSIO.html">BTS SIO</a></li>
+			<li><a href="../../html/Document.html">Compétences</a></li> 
+			<li><a href="../../html/Projets.html">Projets</a></li>
+			<li><a href="../../html/Apprentissage.html">Apprentissage</a></li> 
+			<li><a href="../../html/veille.html">Veille technologique</a></li> 
+			<li><a href="../../html/Coordonées.html">Coordonnées</a></li>
+			<li><a target="_blank" href="../../pdf/Épreuve E4 - BTS SIO 2022.pdf">Tableau de synthèse</a></li>
+		</div>
+	</ul>
+	<br>
+	<br>
+	<br>
+
+	<div class="card-list">
+		<ul class="card-list">
+			<li class="card">
+				<a class="card-image" href="../../travaux/LEGO/TP4 - Des pages dynamiques avec JavaScript/html/produit.html" target="_blank" style="background-image: url(https://m.media-amazon.com/images/I/81nVSMzxFBL._AC_SY450_.jpg)" data-image-full="https://m.media-amazon.com/images/I/81nVSMzxFBL._AC_SY450_.jpg">
+					<img title="Documentation" src="../git/img/produit_newyork_0.jpeg" alt="Psychopomp"/>
+				</a>
+				<a target="_blank" class="card-description" href="../../travaux/LEGO/TP4 - Des pages dynamiques avec JavaScript/html/produit.html" target="">
+					<h2>Page produit + Panier + Inscription</h2>
+					<p>TP4 - Des pages dynamiques avec JS</p>
+				</a>
+			</li>
+
+			<li class="card">
+				<a target="_blank" class="card-image" href="../../travaux/LEGO/TP5 - Un formulaire intéractif/html/inscription.html" target="_blank" style="background-image: url(https://m.media-amazon.com/images/I/81nVSMzxFBL._AC_SY450_.jpg)" data-image-full="https://m.media-amazon.com/images/I/81nVSMzxFBL._AC_SY450_.jpg">
+					<img title="Documentation" src="pageProduit.jpg" alt="Psychopomp"/>
+				</a>
+				<a target="_blank" class="card-description" href="../../travaux/LEGO/TP5 - Un formulaire intéractif/html/inscription.html" target="">
+					<h2>Page produit + Panier + Inscription</h2>
+					<p>TP5 - Un formulaire intéractif</p>
+				</a>
+			</li>
+
+			<li class="card">
+				<a target="" class="card-image" href="https://anas7823.github.io/TrouveLeChiffre/" target="_blank" style="background-image: url(https://123cartes.com/wp-content/uploads/2015/09/pochoir-chiffre-a-imprimer-gratuit-11.jpg)" data-image-full="https://123cartes.com/wp-content/uploads/2015/09/pochoir-chiffre-a-imprimer-gratuit-11.jpg">
+					<img title="Documentation" src="https://123cartes.com/wp-content/uploads/2015/09/pochoir-chiffre-a-imprimer-gratuit-11.jpg" alt="Psychopomp"/>
+				</a>
+				<a target="_blank" class="card-description" href="https://anas7823.github.io/TrouveLeChiffre/" target="">
+					<h2 style="font-size: 20.01px;">Mini jeu</h2>
+					<p>Trouver un chiffre</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+	// This is "probably" IE9 compatible but will need some fallbacks for IE8
+	// - (event listeners, forEach loop)
+
+	// wait for the entire page to finish loading
+	window.addEventListener('load', function() {
+
+	// setTimeout to simulate the delay from a real page load
+	setTimeout(lazyLoad, 1000);
+
+	});
+
+	function lazyLoad() {
+	var card_images = document.querySelectorAll('.card-image');
+
+	// loop over each card image
+	card_images.forEach(function(card_image) {
+	var image_url = card_image.getAttribute('data-image-full');
+	var content_image = card_image.querySelector('img');
+
+	// change the src of the content image to load the new high res photo
+	content_image.src = image_url;
+
+	// listen for load event when the new photo is finished loading
+	content_image.addEventListener('load', function() {
+		// swap out the visible background image with the new fully downloaded photo
+		card_image.style.backgroundImage = 'url(' + image_url + ')';
+		// add a class to remove the blur filter to smoothly transition the image change
+		card_image.className = card_image.className + ' is-loaded';
+	});
+
+	});
+
+	}
+
+
+	</script>
+
+</body>
+</html>
